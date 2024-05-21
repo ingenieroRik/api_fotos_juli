@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous" />
+   
+    <link rel="stylesheet" href="/css/editarFoto.css" />
+</head>
+
+<body>
+    <main>
+        <div>
+            <h2 class="titulo-principal">Editing: </h2>
+        </div>
+        <section>
+            <!-- forEach PARA MOSTRAR MSG DE ERRORES -->
+            <%if (locals.errors) { errors.forEach(error=> { %>
+                <p class="errores" style="color: blue">
+                    <%= error.msg %>
+                </p>
+                <% }) } %> 
+            <!-- LISTA VALIDACIONES FRONT -->
+            <div class="errores">
+                <ul id="ul"> </ul>
+            </div>
+            <div class="form-imagen">
+
+                <form action="/edicionFoto/<%= foto.id %>"  id="form" method="POST" class="" enctype="multipart/form-data">
+                    <!-- CAJA FORMULARIO -->
+                    <div class="caja-formulario">
+                    <!-- NUMERO DE ID -->
+                
+                    <!-- NOMBRE ARTICULO -->
+                    <div>
+                        <label for="">Name:</label>
+                        <input type="text" name="name" class="form-control" id="name" value="<%= foto.name %>" placeholder="Name" />
+                    </div>
+                    <!-- DESCRIPCION ARTICULO -->
+                    <div >
+                        <label for="">Artist:</label>
+                        <input outline="none" type="text" name="artist" class="form-control" id="artist"
+                            placeholder="Artist" value="<%= foto.artist %>" required />
+                    </div>
+                    
+
+
+                    <!-- PRECIO ARTICULO -->
+                        <div>
+                            <label for="">Band:</label>
+                            <input type="text" name="band" class="form-control" id="band" value="<%= foto.band%>" required />
+                        </div>
+                    <!-- DESCUENTO ARTICULO -->
+                        <div>
+                            <label for="">Venue:</label>
+                            <input type="text" name="venue" class="form-control" id="venue" value="<%= foto.venue %>" required />
+                        </div>
+                    <!-- Talle ARTICULO -->
+                        <div>
+                            <label for="">Year:</label>
+                            <input type="text" name="year" class="form-control" id="year" value="<%= foto.year %>"/>
+                        </div>
+                    
+                    </div>
+                    <!-- CAJA BOTONES -->
+                    <div class="caja-botones">
+                    <!-- BOTON MODIFICAR ARTICULO -->
+                    <div class="espacio-botones">
+                        <button class="btn btn-outline-secondary" id="btnCargar" type="submit">Modify</button>
+                    </div>
+                    <!-- BOTON RESETEAR FORMULARIO -->
+                    <div class="espacio-botones">
+                        <input class="btn btn-outline-secondary" type="reset" placeholder="Restablecer" value="Restart">
+                    </div>
+                </form>        
+                    <!-- BOTON VOLVER PAGINA ANTERIOR -->
+                    <div>
+                        <input class="btn btn-outline-secondary" type="button" placeholder="Volver"
+                            value="GoBack" id="btnVolver"  />
+                    </div>
+                    <!-- BOTON ELIMINAR ARTICULO --> 
+                    <div class="boton-eliminar">
+                        <form action="/delete/<%= foto.id %>?_method=DELETE" method="POST">
+                            <button type="submit" id="btnBorrar" class="btn btn-outline-secondary">Delete</button>
+                        </form>
+                    </div>
+
+                    
+
+            </div>
+
+            <!-- foto -->
+            <div class="caja-imagenes">
+            <div class="imagen-art">
+                <label>Photo image:</label>
+                <img src="/images/<%= foto.img%>" alt="FOTO DE PRUEBA">
+            </div>
+            
+    </div>
+        </section>
+    </main>
+  
+</body>
+
+</html>

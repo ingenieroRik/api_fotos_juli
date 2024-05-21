@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+  
+    <title>Juli García Fotografía API</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    
+   
+    <link rel="stylesheet" href="/css/editarFoto.css" />
+
+    <link rel="shortcut icon" href="../images/camara-retro.png" type="image/x-icon">
+</head>
+
+<body class="body">
+    <main>
+        <div>
+            <h2 class="titulo-principal">Add new photo:</h2>
+        </div>
+        <section>
+            <!-- forEach PARA MOSTRAR MSG DE ERRORES -->
+            <%if (locals.errors) {
+                errors.forEach(error => { %>
+                    <p class="errores"><%= error.msg %></p>
+            <%	})
+                } %>
+            <form action="/creacionFoto" method="POST" class="" enctype="multipart/form-data"  onsubmit="return validarFormulario()">
+
+                
+                <!-- CAJA FORMULARIO -->
+                <div class="caja-formulario">
+                <!-- NOMBRE -->
+                <div>
+                    <label for="foto">Name:</label>
+                    <input type="text" name="name" value="" class="form-control" id="name" placeholder="Name"
+                         />
+                </div>
+                <!-- ARTISTA -->
+                <div >
+                    <label for="foto">Artist:</label>
+                    <input outline="none" type="text" name="artist" value=""  id="artist" class="form-control" placeholder="artist"  />
+                </div>
+                <!-- FOTO -->
+                <div class="foto">
+                    <label for="foto">Photo:</label>
+                    <input type="file" name="imagen" class="form-control" id="imgFoto">
+                </div>
+                <!-- BAND -->
+                <div>
+                    <label for="foto">Band:</label>
+                    <input type="text" name="band" value="" placeholder="band" class="form-control" id="band" />
+                </div>
+                <!-- VENUE -->
+                <div>
+                    <label for="foto">Venue:</label>
+                    <input type="text" name="venue" class="form-control" id="venue"
+                        placeholder="venue"  />
+                </div>
+                <!-- YEAR -->
+                <div>
+                    <label for="foto">Year:</label>
+                    <input type="text" name="year" class="form-control" id="year" placeholder="year"
+                         />
+                </div>
+                </div>
+
+                <!-- CAJA BOTONES -->
+                <div class="caja-botones">
+                <!-- BOTON CARGAR ARTICULO -->
+                <div>
+                    <input class="btn btn-outline-secondary" type="submit" value="Upload" placeholder="Cargar" id="btnCargar">
+                </div>
+                <!-- BOTON RESETEAR FORMULARIO -->
+                <div>
+                    <input class="btn btn-outline-secondary" type="reset" placeholder="Restablecer" value="Restart">
+                </div>
+                <!-- BOTON VOLVER PAGINA ANTERIOR -->
+                            <div>
+                                <input class="btn btn-outline-secondary" type="button" placeholder="Volver"
+                                    value="Back" id="btnVolver"  />
+                            </div>
+            </div>
+            </form>
+        
+        </section>
+    </main>
+
+    <script  defer src="js/creacionFoto.js"></script>
+    <script>
+    function validarFormulario() {
+        let name = document.querySelector('input[name="name"]').value;
+        let imagen = document.querySelector('input[name="imagen"]').value;
+        let artist = document.querySelector('input[name="artist"]').value;
+        let band = document.querySelector('input[name="band"]').value;
+        let venue = document.querySelector('input[name="venue"]').value;
+        let year = document.querySelector('input[name="year"]').value;
+
+        if (name.trim() === '' || imagen.trim() === '' || artist.trim() === '' || band.trim() === '' || venue.trim() === '' || year.trim() === '') {
+            alert('Por favor completa todos los campos');
+            return false; // Evita que se envíe el formulario
+        }
+
+        return true; // Permite enviar el formulario si todos los campos están completos
+    }
+</script>
+
+    <script  defer src="js/creacionFoto.js"></script>
+</body>
+
+
+</html>

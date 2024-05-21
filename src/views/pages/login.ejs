@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Juli García Fotografía API</title>
+
+    <link rel="shortcut icon" href="../images/camara-retro.png" type="image/x-icon">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="/css/login.css" rel="stylesheet">
+
+  
+    <script defer src="/js/inicioSesion.js"></script>
+    <script defer src="/js/limpiarInputs.js"></script>
+    
+  </head>
+
+  <body class="text-center">
+
+   
+    
+    <main class="form-signin">
+        <form action="/login"  class="form-login"  method="POST">
+
+        <img class="mb-4" src="/images/camara-retro.png" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+        <div class="form-floating">
+          <input type="email" class="form-control"  id="email" for="email" name="email" placeholder="name@example.com">
+          <label for="floatingInput">Email</label>
+          <div class="error-text"></div>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control"  id="password"  for="password"  name="password"  placeholder="Password">
+          <label for="floatingPassword">Password</label>
+                  <div class="error-text" >
+                   
+                  </div>
+        </div>
+
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+
+        <% if (error) { %>
+          <p  style="color: red;"><%= error %></p>
+        <% } %>
+        <button class="w-100 btn btn-lg btn-primary" id="btn-envio-login" value="sing-in" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2024</p>
+      </form>
+  </main>
+
+
+    
+  </body>
+</html>
