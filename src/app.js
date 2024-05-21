@@ -69,6 +69,6 @@ app.use (adminRoutes);
 app.use (mainRoutes);
 
 // ponemos a escuchar el servidor
-app.listen(process.env.PORT || 3042, () =>  // si subimos a un hosting este nos dará el puerto, sinó sera 3041
+app.listen(process.env.PORT || 3042, () =>  // si subimos a un hosting este nos dará el puerto, sinó sera 3042
 console.log('Servidor corriendo en http://localhost:3042')
 );
