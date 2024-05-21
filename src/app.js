@@ -45,23 +45,30 @@ app.get("/api/fotos/:id", (req,res) => {
 });
 
 
+
 app.get("/api/fotos/:id/img", (req, res) => {
     const foto = db_fotos.find(c => c.id === parseInt(req.params.id));
     if (!foto) return res.status(404).send("Foto no encontrada");
-    else res.sendFile(path.join(__dirname, 'public', 'images', foto.img));
+
+    else res.sendFile(path.join(__dirname,'../public/images', foto.img));
 });
 
 
 /*
-app.get("/login", (req,res) => {
-  res.render("pages/login.ejs");
-});
-/*
-app.get("/lista", (req,res) => {
-    res.render("pages/lista-fotos.ejs", { fotos : db_fotos });
-  });
-
+   // Ajusta la ruta para la nueva estructura del proyecto
+   const imagePath = path.join(__dirname, '../public/images', foto.img);
+   fs.access(imagePath, fs.constants.F_OK, (err) => {
+       if (err) {
+           console.error(File not found: ${imagePath});
+           return res.status(404).send("Foto no encontrada");
+       }
+       res.sendFile(imagePath);
+   });
 */
+
+
+
+
 const adminRoutes = require ("./routes/adminRoutes.js");
 const mainRoutes = require ("./routes/mainRoutes.js");
 
