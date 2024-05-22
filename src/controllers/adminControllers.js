@@ -15,10 +15,10 @@ const adminControllers = {
     admin: (req,res) => res.render( 'create.ejs'),
 
 
-    verlista: (req,res) => res.render("pages/lista-fotos.ejs", { db_fotos : db_fotos }),
+    verlista: (req,res) => res.render("pages/lista-fotos.ejs", { fotos : db_fotos }),
 
 
-    edicionProd: (req, res) => {
+    edicionFoto: (req, res) => {
      
       //const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
       const id = req.params.id;
@@ -32,12 +32,34 @@ const adminControllers = {
   
     },
 
+      procesoEdicion: (req, res) => {
+      //const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+      const id = req.params.id;
+      const fotoIndex = db_fotos.findIndex((foto) => foto.id == id);
+
+      if (fotoIndex !== -1) {
+          const foto = db_fotos[fotoIndex];
+          foto.name = req.body.name || foto.name;
+          foto.artist = req.body.artist || foto.artist;
+          foto.band = req.body.band || foto.band;
+          foto.venue = req.body.venue || foto.venue;
+          foto.year = req.body.year || foto.year;
+
+          if (req.file) {
+              foto.img = req.file.filename;
+          }
+
+          fs.writeFileSync(fotosFilePath, JSON.stringify(db_fotos, null, 2));
+          res.redirect("/verlista");
+      } else {
+          res.status(404).send("Foto no encontrada");
+      }
+    },
 
 
 
-
-    procesoEdicion: (req, res) => {
-      //const fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+    procesoEdicion2: (req, res) => {
+      //const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
   
       let id = req.params.id;
       let fotoAnterior = db_fotos.find((foto) => {

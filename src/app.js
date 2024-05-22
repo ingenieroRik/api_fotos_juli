@@ -9,7 +9,7 @@ const cors = require ('cors'); // <--------- para que puedan ver los datos de nu
 
 app.use(cors());
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
-app.use(express.urlencoded({extended:false})); // MUY IMPORTANTE!!!  para usar el metodo POST
+app.use(express.urlencoded({extended:false})); // MUY IMPORTANTE!!!  para usar el metodo POST Para parsear bodies de formularios
 app.use(express.json()); // MUY IMPORTANTE!!!  para usar el metodo POST
 
 // indicamos a express usar la plantilla EJS que esta en carpeta views.

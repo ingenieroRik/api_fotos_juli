@@ -80,6 +80,9 @@ main {
     --bs-btn-bg: #656f78;
     --bs-btn-border-color: #656f78;
 }
+.subir-foto {
+    background-color: lightgrey;
+}
 .logo-ext{
     margin: auto;
     display: flex;
@@ -93,12 +96,7 @@ main {
     margin-top: 0px;
     margin-bottom: 30px;
   }
-  .pie-form-crear-prod {
-    color:green;
-    text-align: center;
-    padding-top: 20px;
-    font-size: 20px;
-  }
+ 
 /* LAPTOP */
 
 @media (min-width: 769px) {
