@@ -1,9 +1,9 @@
 const express = require ("express");
 require('dotenv').config();
 const app = express();
-const path = require('path');
+//const path = require('path');
 const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
-const fs = require("fs");
+//const fs = require("fs");
 const cors = require ('cors'); // <--------- para que puedan ver los datos de nuestra api  hacer  --> npm i cors
 
 app.use(cors());
@@ -21,8 +21,8 @@ app.set('views', './src/views');
 // Servir archivos estáticos desde el directorio 'public'
 app.use(express.static('public'));
 
-const fotosFilePath = path.join(__dirname, "data/db_fotos.json");
-const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+//const fotosFilePath = path.join(__dirname, "data/db_fotos.json");
+//const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
 /* En la constante "db_fotos" ya tenemos los fotos que están 
 guardados en la carpeta data como Json (un array de objetos literales) */
 
