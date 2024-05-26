@@ -7,8 +7,29 @@ const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
 
 const mainControllers = {
 
+        home: (req,res) => {
 
+            return res.render("index.ejs", { fotos : db_fotos }); 
+        },
+        
+        fotos: (req,res) => {
+   
+            return res.send(db_fotos);
+        },
 
+        foto: (req,res) => {
+   
+            const foto = db_fotos.find(c => c.id === parseInt(req.params.id));
+            if (!foto) return res.status(404).send("Foto no encontrada");
+            else return res.send(foto);
+        },
+        
+        foto_img : (req, res) => {
+            const foto = db_fotos.find(c => c.id === parseInt(req.params.id));
+            if (!foto) return res.status(404).send("Foto no encontrada");
+        
+            else res.sendFile(path.join(__dirname,'../../public/images', foto.img));
+        },
 
         verlogin: (req,res) => {  return res.render("pages/login.ejs", { error: null });  },
       
@@ -21,8 +42,7 @@ const mainControllers = {
             // usuario se queda en login y si no es ninguno, va al home
             //const adminLogueado = req.body;
             console.log (req.body);
-            
-            
+                       
             const { email, password } = req.body;
 
             if (!email || !password) {
