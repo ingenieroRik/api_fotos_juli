@@ -50,7 +50,9 @@ const mainControllers = {
             }
     // ************************  administrador  ******************************
           if (email === process.env.ADMIN && password === process.env.PASSWORD) {
-    
+                req.session.admin = process.env.ADMIN; // Establecer la variable de sesión
+
+                console.log(req.session.admin);
                 res.render("pages/lista-fotos.ejs", { fotos : db_fotos })
               
            }

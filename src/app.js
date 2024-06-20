@@ -1,10 +1,18 @@
 const express = require ("express");
+const session = require('express-session');
 require('dotenv').config();
 const app = express();
 //const path = require('path');
 const methodOverride = require('method-override'); // Para poder usar los métodos PUT y DELETE
 //const fs = require("fs");
 const cors = require ('cors'); // <--------- para que puedan ver los datos de nuestra api  hacer  --> npm i cors
+
+// Configurar la sesión
+app.use(session({
+    secret: 'tu_secreto', // Cambia esto por una cadena secreta
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.use(cors());
 app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
@@ -17,6 +25,9 @@ app.set('view engine', 'ejs');
 //si la ruta por defecto no es /views debemos decirle a node que la carpeta se encuentra
 // en otra ruta, para ello usamos:
 app.set('views', './src/views');
+
+
+
 
 // Servir archivos estáticos desde el directorio 'public'
 app.use(express.static('public'));
