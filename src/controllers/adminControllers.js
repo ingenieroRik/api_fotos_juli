@@ -5,7 +5,8 @@ const { json } = require("express");
 const fs = require("fs");
 
 const fotosFilePath = path.join(__dirname, "../data/db_fotos.json");
-const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+//const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8")); si lo declaro aqui solamente no actualiza la lista cuando agrego
+
 
 /* Requerimos propiedad validationResult para poder validar campos de form */
 const {validationResult, body} = require('express-validator');
@@ -15,10 +16,15 @@ const adminControllers = {
     admin: (req,res) => res.render( 'create.ejs'),
 
 
-    verlista: (req,res) => res.render("pages/lista-fotos.ejs", { fotos : db_fotos }),
+    //verlista: (req,res) => res.render("pages/lista-fotos.ejs", { fotos : db_fotos }),
 
+      verlista: (req, res) => {
+        const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8")); // Leer archivo cada vez
+        res.render("pages/lista-fotos.ejs", { fotos: db_fotos });
+       },
 
-    edicionFoto: (req, res) => {
+       
+       edicionFoto: (req, res) => {
      
       //const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
       const id = req.params.id;
@@ -33,7 +39,8 @@ const adminControllers = {
     },
 
       procesoEdicion: (req, res) => {
-      //const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+      const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+
       const id = req.params.id;
       const fotoIndex = db_fotos.findIndex((foto) => foto.id == id);
 
@@ -116,6 +123,7 @@ const adminControllers = {
 
 
     procesoCreacion: (req, res) => {
+      const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8")); // Leer archivo cada vez
       const fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
       let errors = validationResult(req);
       if(errors.isEmpty()) {

@@ -3,7 +3,7 @@ window.onload = function () {
     let name = document.querySelector("#name")
     let artist = document.querySelector("#artist")
     let band = document.querySelector("#band")
-    let color = document.querySelector("#color")
+  
     let venue = document.querySelector("#venue")
     let year = document.querySelector("#year")
     let imagen = document.querySelector("#imgFoto")
@@ -25,10 +25,6 @@ window.onload = function () {
 
         if (band.value.length < 1) {
             errors.band = "Debes completar con un band valido"
-        }
-
-        if (color.value.length <= 5) {
-            errors.color = "Debes completar con un color valido"
         }
 
         if (venue.value.length < 4) {
