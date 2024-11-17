@@ -26,7 +26,7 @@ const adminControllers = {
        
        edicionFoto: (req, res) => {
      
-      //const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+      const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
       const id = req.params.id;
       //console.log(req.params);
       console.log(id);
@@ -66,7 +66,7 @@ const adminControllers = {
 
 
     procesoEdicion2: (req, res) => {
-      //const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
+      const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8"));
   
       let id = req.params.id;
       let fotoAnterior = db_fotos.find((foto) => {
