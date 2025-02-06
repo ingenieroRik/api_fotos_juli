@@ -28,6 +28,9 @@ const mainControllers = {
         },
         
         foto_img : (req, res) => {
+
+            const db_fotos = JSON.parse(fs.readFileSync(fotosFilePath, "utf-8")); // Leer archivo cada vez       5/2/2025
+
             const foto = db_fotos.find(c => c.id === parseInt(req.params.id));
             if (!foto) return res.status(404).send("Foto no encontrada");
         
