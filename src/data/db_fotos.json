@@ -217,12 +217,12 @@
  },
  {
   "id": 25,
-  "name": ", Estadio velez, 2023",
+  "name": "Lali Espósito, Estadio velez, 2023",
   "img": "LALI_VELEZ_2023.jpg",
   "artist": "Lali Esposito",
   "band": "Lali Esposito",
   "venue": "Estadio velez",
-  "year": 2023
+  "year": "2023"
  },
  {
   "id": 26,
@@ -289,12 +289,12 @@
  },
  {
   "id": 33,
-  "name": "SKAY, Cosquín Rock, 2024.jpg",
+  "name": "SKAY, Cosquín Rock, 2024.",
   "img": "SKAY_COSQUIN ROCK_2024.jpg",
   "artist": "Skay",
   "band": "Skay",
   "venue": "Cosquín Rock",
-  "year": 2024
+  "year": "2024"
  },
  {
   "id": 34,
@@ -420,6 +420,96 @@
   "artist": "Luck Ra",
   "band": "Luck Ra",
   "venue": "Mar del Plata",
+  "year": "2025"
+ },
+ {
+  "id": 48,
+  "name": "Wos, Cosquin Rock, 2025.",
+  "img": "imagen-1739843201017.jpeg",
+  "artist": "Wos",
+  "band": "Wos",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 49,
+  "name": "Wos, Cosquin Rock, 2025.",
+  "img": "imagen-1739843258379.jpeg",
+  "artist": "Wos",
+  "band": "Wos",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 50,
+  "name": "Patricio Sardelli, Airbag, Cosquin Rock 2025.",
+  "img": "imagen-1739843638774.jpeg",
+  "artist": "Airbag",
+  "band": "Airbag",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 51,
+  "name": "Hilda Lizarazu, Cosquin Rock 2025.",
+  "img": "imagen-1739843701366.jpeg",
+  "artist": "Hilda Lizarazu",
+  "band": "Hilda Lizarazu",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 52,
+  "name": "Ale Kurz , Cosquin Rock, 2025.",
+  "img": "imagen-1739843793396.jpeg",
+  "artist": "Ale Kurz",
+  "band": "Ale Kurz",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 53,
+  "name": "Nicki Nicole, Cosquin Rock , 2025.",
+  "img": "imagen-1739843873755.jpeg",
+  "artist": "Nicki Nicole",
+  "band": "Nicki Nicole",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 54,
+  "name": "Wayra Iglesias, Cosquin Rock, 2025.",
+  "img": "imagen-1739843953488.jpeg",
+  "artist": "Wayra Iglesias.",
+  "band": "Wayra Iglesias",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 55,
+  "name": "Mateo Sujatovich, Conociendo Rusia, Cosquin Rock, 2025.",
+  "img": "imagen-1739844165405.jpeg",
+  "artist": "Mateo Sujatovich, Conociendo Rusia.",
+  "band": "Conociendo Rusia",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 56,
+  "name": "Dillom, Cosquin Rock 2025.",
+  "img": "imagen-1739844210110.jpeg",
+  "artist": "Dillom",
+  "band": "Dillom",
+  "venue": "Cosquín Rock 2025",
+  "year": "2025"
+ },
+ {
+  "id": 57,
+  "name": "Los Piojos, Cosquin Rock 2025",
+  "img": "imagen-1739844421918.jpeg",
+  "artist": "Los Piojos",
+  "band": "Los Piojos",
+  "venue": "Cosquín Rock 2025",
   "year": "2025"
  }
 ]
