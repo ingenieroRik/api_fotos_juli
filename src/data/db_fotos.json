@@ -511,5 +511,95 @@
   "band": "Los Piojos",
   "venue": "Cosquín Rock 2025",
   "year": "2025"
+ },
+ {
+  "id": 58,
+  "name": "Illia Kuriaky and The Valderramas, festival buena vibra ,2025.",
+  "img": "imagen-1740355824969.avif",
+  "artist": "Illia Kuriaky and The Valderramas",
+  "band": "Illia Kuriaky and The Valderramas",
+  "venue": "Festival buena vibra",
+  "year": "2025"
+ },
+ {
+  "id": 59,
+  "name": "Illia Kuriaky and The Valderramas, festival buena vibra ,2025.",
+  "img": "imagen-1740356053247.avif",
+  "artist": "Illia Kuriaky and The Valderramas",
+  "band": "Illia Kuriaky and The Valderramas",
+  "venue": "Festival buena vibra",
+  "year": "2025"
+ },
+ {
+  "id": 60,
+  "name": "Joaquin Vitola, Festival buena vibra, 2025",
+  "img": "imagen-1740356362371.avif",
+  "artist": "Joaquin Vitola",
+  "band": "Joaquin Vitola",
+  "venue": "Festival buena vibra",
+  "year": "2025"
+ },
+ {
+  "id": 61,
+  "name": "Juana Molina, Festival buena vibra, 2025",
+  "img": "imagen-1740356420404.avif",
+  "artist": "Juana Molina",
+  "band": "Juana Molina",
+  "venue": "Festival buena vibra",
+  "year": "2025"
+ },
+ {
+  "id": 62,
+  "name": "Louta y Zoe Gotusso, Festival buena vibra, 2025",
+  "img": "imagen-1740356485047.avif",
+  "artist": "Louta y Zoe Gotusso",
+  "band": "Louta y Zoe Gotusso",
+  "venue": "Festival buena vibra",
+  "year": "2025"
+ },
+ {
+  "id": 63,
+  "name": "Louta y Marilina Bertoldi, Festival buena vibra, 2025",
+  "img": "imagen-1740356578898.avif",
+  "artist": "Louta y Marilina Bertoldi",
+  "band": "Louta y Marilina Bertoldi",
+  "venue": "Festival buena vibra",
+  "year": "2025"
+ },
+ {
+  "id": 64,
+  "name": "Nathy Peluso - Lollapalooza Argentina 2025",
+  "img": "imagen-1742850766915.jpeg",
+  "artist": "Nathy Peluso",
+  "band": "Nathy Peluso",
+  "venue": "Lollapalooza Argentina",
+  "year": "2025"
+ },
+ {
+  "id": 65,
+  "name": "Olivia Rodrigo - Lollapalooza Argentina 2025",
+  "img": "imagen-1742850859290.jpeg",
+  "artist": "Olivia Rodrigo ",
+  "band": "Olivia Rodrigo",
+  "venue": "Lollapalooza Argentina",
+  "year": "2025"
+ },
+ {
+  "id": 66,
+  "name": "Girl in Red - Lollapalooza Argentina 2025",
+  "img": "imagen-1742850929456.jpeg",
+  "artist": "Girl in Red",
+  "band": "Girl in Red",
+  "venue": "Lollapalooza Argentina",
+  "year": "2025"
+ },
+ {
+  "id": 67,
+  "name": "Todos los Martes - Club de arte Te empuja - Bernal",
+  "img": "imagen-1742850974523.jpeg",
+  "artist": "Todos los Martes",
+  "band": "Todos los Martes",
+  "venue": "Club de arte Te empuja - Bernal",
+  "year": "2025"
  }
 ]

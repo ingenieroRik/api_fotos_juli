@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/public/views/index.ejs"
+    "livePreview.defaultPreviewPath": "/public/views/index.ejs",
+    "bitoAI.codeCompletion.enableAutoCompletion": false
 }
