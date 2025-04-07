@@ -595,11 +595,47 @@
  },
  {
   "id": 67,
-  "name": "Todos los Martes - Club de arte Te empuja - Bernal",
+  "name": "Todos los Martes - Club de arte Te empuja - Bernal - 2025",
   "img": "imagen-1742850974523.jpeg",
   "artist": "Todos los Martes",
   "band": "Todos los Martes",
   "venue": "Club de arte Te empuja - Bernal",
+  "year": "2025"
+ },
+ {
+  "id": 68,
+  "name": "lali Esposito, Quilmes Rock, 2025",
+  "img": "imagen-1743986390496.jpeg",
+  "artist": "Lali Esposito",
+  "band": "Lali Esposito",
+  "venue": "Quilmes Rock",
+  "year": "2025"
+ },
+ {
+  "id": 69,
+  "name": "Lali Espósito, Quilmes Rock, 2025",
+  "img": "imagen-1743986443878.jpeg",
+  "artist": "Lali Esposito",
+  "band": "Lali Esposito",
+  "venue": "Quilmes Rock",
+  "year": "2025"
+ },
+ {
+  "id": 70,
+  "name": "Lali y Miranda, Quilmes Rock, 2025",
+  "img": "imagen-1743986497357.jpeg",
+  "artist": "Lali Esposito y Miranda",
+  "band": "Lali Esposito y Miranda",
+  "venue": "Quilmes Rock",
+  "year": "2025"
+ },
+ {
+  "id": 71,
+  "name": "Lali y Miranda, Quilmes Rock, 2025",
+  "img": "imagen-1743986558576.jpeg",
+  "artist": "Lali Esposito y Miranda",
+  "band": "Lali Esposito y Miranda",
+  "venue": "Quilmes Rock",
   "year": "2025"
  }
 ]
